@@ -1,6 +1,12 @@
 pipeline {
     agent any
-
+environment {
+         AWS_ACCESS_KEY_ID     = 'AKIAVRUVUNAVOI4RF25T'
+         AWS_SECRET_ACCESS_KEY = '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'
+         AWS_REGION = 'us-east-1'
+        // LOG_GROUP_NAME = 'practice'
+         // LOG_STREAM_NAME = '${BUILD_NAME}-${BUILD_NUMBER}'
+     }
     stages {
         stage('Push Docker image to ECR') {
             steps {
